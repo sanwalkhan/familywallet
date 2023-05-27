@@ -35,7 +35,9 @@ const HomeScreen = () => {
     }
   };
   
-
+  const handleEditContact = (index) => {
+   alert("heelo")
+  };
   return (
     <View style={styles.container}>
       <View style={styles.form}>
@@ -59,10 +61,13 @@ const HomeScreen = () => {
       </View>
       <FlatList
         data={contacts}
-        renderItem={({ item }) => (
+        renderItem={({ item, index }) => (
           <View style={styles.contactItem}>
             <Text style={styles.contactName}>{item.name}</Text>
             <Text style={styles.contactPhoneNumber}>{item.phoneNumber}</Text>
+            <TouchableOpacity onPress={() => handleEditContact(index)}>
+              <Text>Edit</Text>
+            </TouchableOpacity>
           </View>
         )}
         keyExtractor={(item, index) => index.toString()}
