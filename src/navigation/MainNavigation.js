@@ -15,6 +15,7 @@ function MainNavigator() {
       <Stack.Navigator>
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Home" component={Home}/>
+
       </Stack.Navigator>
     </NavigationContainer>
   );
